@@ -110,7 +110,7 @@ export default function Index() {
             <div className="w-8 h-8 rounded-sm bg-gradient-to-br from-[#C9A84C] to-[#9B7A2A] flex items-center justify-center">
               <span className="text-[#050A14] font-cormorant font-bold text-sm">L</span>
             </div>
-            <span className="font-cormorant text-xl tracking-widest text-[#E8C97A]">LEXNOVA</span>
+            <span className="font-cormorant text-xl tracking-widest text-[#E8C97A]">ЭквилибрЪ</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -534,7 +534,7 @@ export default function Index() {
             <div className="w-7 h-7 rounded-sm bg-gradient-to-br from-[#C9A84C] to-[#9B7A2A] flex items-center justify-center">
               <span className="text-[#050A14] font-cormorant font-bold text-xs">L</span>
             </div>
-            <span className="font-cormorant text-lg tracking-widest text-[#E8C97A]">LEXNOVA</span>
+            <span className="font-cormorant text-lg tracking-widest text-[#E8C97A]">ЭквилибрЪ</span>
           </div>
 
           <div className="flex gap-6 flex-wrap justify-center">
