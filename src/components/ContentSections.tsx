@@ -10,16 +10,24 @@ const NAV_LINKS = [
 
 const PRICING = [
   {
-    name: "Стартовый", price: "5 000", period: "/ консультация", popular: false,
-    features: ["Онлайн-консультация 60 мин", "Анализ документов (до 5 стр.)", "Письменное заключение", "Email-поддержка 3 дня"],
+    name: "Стартовый", price: "5 000", period: "₽ / устная консультация", popular: false,
+    features: ["Онлайн-консультация 30 мин", "Анализ вашей ситуации и рисков", "Письменная памятка по результатам консультации"],
   },
   {
-    name: "Бизнес", price: "45 000", period: "/ месяц", popular: true,
-    features: ["Безлимитные консультации", "Составление договоров", "Представительство в суде", "Персональный юрист", "Приоритетный ответ 2 часа", "Ежемесячный правовой аудит"],
+    name: "Базовый", price: "15 000", period: "₽ / письменная консультация", popular: false,
+    features: ["Онлайн-консультация 60 мин", "Анализ документов (до 20 стр.)", "Письменное заключение", "Email-поддержка 2 дня"],
   },
   {
-    name: "Премиум", price: "120 000", period: "/ месяц", popular: false,
-    features: ["Всё из тарифа «Бизнес»", "Команда юристов 3 чел.", "M&A и due diligence", "Международное право", "Личный выезд к клиенту", "Доступ 24/7"],
+    name: "Расширенный", price: "от 30 000", period: "₽ / консультация и Legal DD", popular: false,
+    features: ["Онлайн-консультация или встреча", "Анализ документов (от 20 стр.) и выявление рисков", "Письменное заключение", "Email-поддержка 3 дня"],
+  },
+  {
+    name: "Бизнес", price: "от 200 000", period: "₽ / месяц", popular: true,
+    features: ["Безлимитные консультации", "Анализ и составление документации", "Ежемесячный правовой аудит", "Представительство в госорганах", "Представительство на переговорах"],
+  },
+  {
+    name: "Премиум", price: "от 500 000", period: "₽ / месяц", popular: false,
+    features: ["Всё из тарифа «Бизнес»", "Команда юристов", "M&A и due diligence", "Международное право", "Личный выезд к клиенту", "Приоритетный ответ"],
   },
 ];
 
@@ -50,7 +58,7 @@ export default function ContentSections({ scrollTo }: ContentSectionsProps) {
             <div className="gold-divider w-24 mx-auto mt-6"></div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 items-start">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
             {PRICING.map((p, i) => (
               <div key={i}
                 className={`relative rounded-2xl p-8 reveal transition-all duration-500 ${p.popular
@@ -64,9 +72,9 @@ export default function ContentSections({ scrollTo }: ContentSectionsProps) {
                 )}
                 <div className="mb-8">
                   <div className="text-[rgba(201,168,76,0.6)] text-xs tracking-widest uppercase mb-4">{p.name}</div>
-                  <div className="flex items-baseline gap-1">
-                    <span className="font-cormorant text-5xl text-white font-light">{p.price}</span>
-                    <span className="text-[rgba(201,168,76,0.5)] text-sm">₽{p.period}</span>
+                  <div className="flex items-baseline gap-1 flex-wrap">
+                    <span className="font-cormorant text-4xl text-white font-light">{p.price}</span>
+                    <span className="text-[rgba(201,168,76,0.5)] text-sm leading-tight">{p.period}</span>
                   </div>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -83,6 +91,29 @@ export default function ContentSections({ scrollTo }: ContentSectionsProps) {
                 </button>
               </div>
             ))}
+          </div>
+
+          {/* COURT SERVICES */}
+          <div className="mt-12 glass-card rounded-2xl p-8 reveal">
+            <h3 className="font-cormorant text-2xl text-white mb-6">Судебное представительство</h3>
+            <div className="grid md:grid-cols-3 gap-4 mb-8">
+              {[
+                { title: "Суд общей юрисдикции", price: "от 15 000 ₽" },
+                { title: "Арбитражный суд", price: "от 25 000 ₽" },
+                { title: "Ознакомление с материалами дела", price: "от 10 000 ₽" },
+              ].map(({ title, price }) => (
+                <div key={title} className="flex items-center justify-between border border-[rgba(201,168,76,0.15)] rounded-xl px-5 py-4 gap-4">
+                  <div className="flex items-center gap-3">
+                    <Icon name="Gavel" size={16} className="text-[#C9A84C] flex-shrink-0" />
+                    <span className="text-white/70 text-sm">{title}</span>
+                  </div>
+                  <span className="text-[#E8C97A] text-sm font-semibold whitespace-nowrap">{price}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-white/40 text-sm leading-relaxed border-t border-[rgba(201,168,76,0.1)] pt-6">
+              Если вы не нашли свой случай в тарифных планах, пожалуйста, свяжитесь с нами — мы обязательно подберём наиболее комфортный для вас вариант.
+            </p>
           </div>
         </div>
       </section>
@@ -189,7 +220,7 @@ export default function ContentSections({ scrollTo }: ContentSectionsProps) {
               ["1. Сбор данных", "Мы собираем только те персональные данные, которые вы добровольно предоставляете при заполнении форм на сайте: имя, телефон, email и сообщение. Иных данных без вашего согласия мы не собираем."],
               ["2. Использование данных", "Полученные сведения используются исключительно для обратной связи с вами и организации консультаций. Мы не передаём ваши данные третьим лицам без вашего явного согласия."],
               ["3. Хранение и защита", "Все данные хранятся на защищённых серверах с применением современного шифрования. Доступ к данным имеют только уполномоченные сотрудники компании."],
-              ["4. Ваши права", "Вы вправе в любое время запросить удаление или исправление своих данных. Для этого напишите нам на email: privacy@lexnova.ru"],
+              ["4. Ваши права", "Вы вправе в любое время запросить удаление или исправление своих данных. Для этого напишите нам на email: aequil@yandex.ru"],
             ].map(([title, text]) => (
               <div key={title}>
                 <h3 className="font-cormorant text-xl text-[#E8C97A] mb-2">{title}</h3>
