@@ -250,7 +250,7 @@ export default function ContentSections({ scrollTo }: ContentSectionsProps) {
             ))}
           </div>
 
-          <p className="text-white/20 text-xs">© 2026 LexNova. Все права защищены.</p>
+          <p className="text-white/20 text-xs">© 2026 Aequilibrium. Все права защищены.</p>
         </div>
       </footer>
     </>
