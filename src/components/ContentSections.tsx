@@ -29,11 +29,6 @@ const BLOG = [
   { date: "3 апр 2026", tag: "Цифровое право", title: "Законодательство о персональных данных: новые штрафы", desc: "С 2026 года штрафы за утечку данных выросли в 10 раз. Как подготовить компанию." },
 ];
 
-const TEAM = [
-  { name: "Александр Волков", role: "Партнёр, корпоративное право", exp: "18 лет опыта" },
-  { name: "Марина Соколова", role: "Партнёр, недвижимость", exp: "14 лет опыта" },
-  { name: "Дмитрий Орлов", role: "Старший юрист, суды", exp: "11 лет опыта" },
-];
 
 interface ContentSectionsProps {
   scrollTo: (href: string) => void;
@@ -94,32 +89,6 @@ export default function ContentSections({ scrollTo }: ContentSectionsProps) {
 
       <div className="gold-divider" />
 
-      {/* TEAM */}
-      <section className="py-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-14 reveal">
-            <span className="text-[#C9A84C] text-xs tracking-widest uppercase border border-[rgba(201,168,76,0.2)] px-4 py-1.5 rounded-full">Команда</span>
-            <h2 className="font-cormorant text-5xl font-light text-white mt-6">
-              Наши <span className="text-gold-gradient italic">юристы</span>
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {TEAM.map((t, i) => (
-              <div key={i} className="glass-card rounded-xl p-8 text-center reveal" style={{ transitionDelay: `${i * 100}ms` }}>
-                <div className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-[rgba(201,168,76,0.2)] to-[rgba(201,168,76,0.05)] border border-[rgba(201,168,76,0.2)]">
-                  <span className="font-cormorant text-3xl text-[#C9A84C] font-bold">{t.name[0]}</span>
-                </div>
-                <h3 className="font-cormorant text-2xl text-white mb-1">{t.name}</h3>
-                <p className="text-[rgba(201,168,76,0.6)] text-xs mb-3 tracking-wide">{t.role}</p>
-                <span className="text-white/30 text-xs border border-white/10 px-3 py-1 rounded-full">{t.exp}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <div className="gold-divider" />
-
       {/* BLOG */}
       <section id="blog" className="py-32 grid-bg">
         <div className="max-w-7xl mx-auto px-6">
@@ -168,9 +137,8 @@ export default function ContentSections({ scrollTo }: ContentSectionsProps) {
 
               <div className="space-y-5">
                 {[
-                  { icon: "Phone", label: "Телефон", val: "+7 (495) 000-00-00" },
-                  { icon: "Mail", label: "Email", val: "info@lexnova.ru" },
-                  { icon: "MapPin", label: "Адрес", val: "Москва, Пресненская наб. 12" },
+                  { icon: "Phone", label: "Телефон", val: "+7 (909) 649-56-80" },
+                  { icon: "Mail", label: "Email", val: "aequil@yandex.ru" },
                   { icon: "Clock", label: "Режим работы", val: "Пн–Пт: 9:00–20:00" },
                 ].map(({ icon, label, val }) => (
                   <div key={label} className="flex items-center gap-4">
@@ -237,7 +205,7 @@ export default function ContentSections({ scrollTo }: ContentSectionsProps) {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <div className="w-7 h-7 rounded-sm bg-gradient-to-br from-[#C9A84C] to-[#9B7A2A] flex items-center justify-center">
-              <span className="text-[#050A14] font-cormorant font-bold text-xs">L</span>
+              <span className="text-[#050A14] font-cormorant font-bold text-xs">Э</span>
             </div>
             <span className="font-cormorant text-lg tracking-widest text-[#E8C97A]">ЭквилибрЪ</span>
           </div>

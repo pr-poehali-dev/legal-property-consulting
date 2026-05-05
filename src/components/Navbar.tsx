@@ -21,7 +21,7 @@ export default function Navbar({ navScrolled, mobileOpen, setMobileOpen, scrollT
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-sm bg-gradient-to-br from-[#C9A84C] to-[#9B7A2A] flex items-center justify-center">
-            <span className="text-[#050A14] font-cormorant font-bold text-sm">L</span>
+            <span className="text-[#050A14] font-cormorant font-bold text-sm">Э</span>
           </div>
           <span className="font-cormorant text-xl tracking-widest text-[#E8C97A]">ЭквилибрЪ</span>
         </div>
